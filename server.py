@@ -2,13 +2,8 @@ import json
 
 from outlier_detection.config import AUTH_KEY
 from outlier_detection.logger import logger
-from outlier_detection.utils import detect_outlier, compute_z_score, np_json_dumps
-from outlier_detection.server_utils import (
-    make_fastapi_app,
-    RequestSchema,
-    DetectionResponseSchema,
-    ShiftResponseSchema,
-)
+from outlier_detection.server_utils import DetectionResponseSchema, RequestSchema, ShiftResponseSchema, make_fastapi_app
+from outlier_detection.utils import compute_z_score, detect_outlier, np_json_dumps
 
 app = make_fastapi_app(title="Outlier Detection Service", version="0.1", logger=logger, auth_key=AUTH_KEY)
 

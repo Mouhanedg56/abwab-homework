@@ -1,5 +1,4 @@
 import asyncio
-
 from typing import Dict, List, Literal, Optional
 
 from fastapi import Depends, FastAPI, Request, status
@@ -113,4 +112,3 @@ class ShiftResponseSchema(BaseModel):
     ood_feature_count: int
     all_z_scores: List[float]
     debug: Optional[Dict] = None
-

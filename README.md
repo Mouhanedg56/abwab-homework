@@ -9,8 +9,8 @@ Only "Gift_Cards", "Digital_Music", "Magazine_Subscriptions", "Subscription_Boxe
 The training process depends on a rather chaotic pile of notebooks (due to time constrain) that retrieve and prepare data.
 On each notebook, I tried different techniques and different features.
 
-The technique used in production is the one used in **outlier-detection-text-only.ipynb** notebook.
-We encoded text used embeddings and computed centroids. Then a radius was defined to detect outliers.
+The technique deployed in the API is the same one used in `outlier-detection-text-only.ipynb` notebook.
+We encoded text used embeddings and computed centroids. Then we define a radius to detect outliers.
 
 # Distribution drift
 I used a very simple metric called z-score. To compute this metric, we need to subtract the mean and divide by the standard deviation for each feature.

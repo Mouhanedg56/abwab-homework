@@ -1,8 +1,18 @@
 from outlier_detection.config import AUTH_KEY
-from outlier_detection.utils import detect_outlier, compute_z_score
 from outlier_detection.server_utils import RequestSchema
+from outlier_detection.utils import compute_z_score, detect_outlier
 
-DETECT_DEBUG_KEYS = {"encoder", "features", "radius", "EM", "MV", "Gift_Cards", "Digital_Music", "Magazine_Subscriptions", "Subscription_Boxes"}
+DETECT_DEBUG_KEYS = {
+    "encoder",
+    "features",
+    "radius",
+    "EM",
+    "MV",
+    "Gift_Cards",
+    "Digital_Music",
+    "Magazine_Subscriptions",
+    "Subscription_Boxes",
+}
 SHIFT_DEBUG_KEYS = {"encoder", "features", "mean_vector", "std_vector"}
 DETECT_RESPONSE_KEYS = {"outlier", "distance"}
 SHIFT_RESPONSE_KEYS = {"mean_z_score", "mean_z_score", "all_z_scores"}
